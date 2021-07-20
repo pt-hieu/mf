@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "clean": "del -rf node-modules",
+    "dev": "lerna run dev --no-bail --parallel",
+    "build": "lerna run build --no-bail --parallel",
+    "start": "lerna run start --no-bail --parallel"
+  }
+}
