@@ -1,4 +1,6 @@
-import Hello from 'remote/Hello';
+import './module.declare';
+import Hello from 'common/Hello';
+
 export default () => {
   return (
     <div>

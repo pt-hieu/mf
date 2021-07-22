@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
-    port: 3000,
+    port: 3001,
   },
   output: {
     path: path.resolve(__dirname, '..', './dist'),

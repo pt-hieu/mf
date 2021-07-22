@@ -47,11 +47,9 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'remote',
+      name: 'events',
       filename: 'remoteEntry.js',
-      exposes: {
-        './Hello': './src/components/Hello',
-      },
+      exposes: {},
       shared: {
         ...deps,
         react: {

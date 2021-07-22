@@ -43,10 +43,7 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        common: 'common@http://localhost:2999/remoteEntry.js',
-        home: 'home@http://localhost:3001/remoteEntry.js',
-        events: 'events@http://localhost:3002/remoteEntry.js',
-        hrm: 'hrm@http://localhost:3003/remoteEntry.js',
+        common: 'common@http://localhost:3002/remoteEntry.js',
       },
       shared: {
         ...deps,
