@@ -1,11 +1,5 @@
-import './module.declare';
-import Hello from 'common/Hello';
+import Events from 'events/Events';
 
 export default () => {
-  return (
-    <div>
-      <Hello />
-      <div>Host</div>
-    </div>
-  );
+  return <Events />;
 };

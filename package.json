@@ -6,6 +6,7 @@
   },
   "scripts": {
     "clean": "del -rf node-modules",
+    "events": "lerna run events --no-bail --parallel",
     "dev": "lerna run dev --no-bail --parallel",
     "build": "lerna run build --no-bail --parallel",
     "start": "lerna run start --no-bail --parallel"

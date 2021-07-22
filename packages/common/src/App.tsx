@@ -1,3 +1,6 @@
+import { Button } from 'antd';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 export default () => {
-  return <div>Remote App running at 3002</div>;
+  return <Button>Remote App running at 3002</Button>;
 };

@@ -1,3 +1,4 @@
+import MainPage from './components/MainPage';
 export default () => {
-  return <div>Events</div>;
+  return <MainPage />;
 };

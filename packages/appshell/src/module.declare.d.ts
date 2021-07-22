@@ -1,1 +1,1 @@
-declare module "common/Hello"
+declare module "events/Events"

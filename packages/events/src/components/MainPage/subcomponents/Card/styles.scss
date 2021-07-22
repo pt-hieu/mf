@@ -1,0 +1,22 @@
+.card {
+  width: 400px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 0.5rem;
+
+  &__name {
+    font-size: 2rem;
+  }
+
+  &__events {
+    opacity: 60%;
+    margin-top: 0.5rem;
+  }
+}
