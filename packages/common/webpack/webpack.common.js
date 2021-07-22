@@ -1,4 +1,6 @@
 const path = require('path');
+const { ModuleFederationPlugin } = require('webpack').container;
+const deps = require('../package.json').dependencies;
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -10,6 +12,13 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /bootstrap\.js$/,
+      //   loader: 'bundle-loader',
+      //   options: {
+      //     lazy: true,
+      //   },
+      // },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
@@ -36,9 +45,24 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'remote',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Hello': './src/components/Hello',
+      },
+      shared: {
+        ...deps,
+        react: {
+          requiredVersion: '^17.0.0',
+        },
+      },
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, '..', './dist'),
     filename: 'index.[contentHash].js',
-    publicPath: '/',
+    publicPath: 'auto',
   },
 };

@@ -7,17 +7,12 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
-    proxy: [
-      {
-        context: ['/auth', '/api'],
-        target: 'http://localhost:3001',
-      },
-    ],
+    port: 3001,
   },
   output: {
     path: path.resolve(__dirname, '..', './dist'),
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: 'auto',
   },
   module: {
     rules: [
