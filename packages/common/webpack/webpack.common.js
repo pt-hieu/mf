@@ -12,13 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /bootstrap\.js$/,
-      //   loader: 'bundle-loader',
-      //   options: {
-      //     lazy: true,
-      //   },
-      // },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
@@ -49,7 +42,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'common',
       filename: 'remoteEntry.js',
-      exposes: {},
+      exposes: {
+        './NavBar': './src/components/NavBar',
+      },
       shared: {
         ...deps,
         react: {

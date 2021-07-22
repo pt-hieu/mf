@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "@mf/common",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Hieu Pham <hieupham@kms-technology.com>",
@@ -27,9 +27,11 @@
     "@types/react-router-dom": "^5.1.7",
     "babel-loader": "^8.2.2",
     "bundle-loader": "^0.5.6",
+    "@mf/types": "1.0.0",
     "css-loader": "^5.2.0",
     "html-webpack-plugin": "^5.3.1",
     "path-browserify": "^1.0.1",
+    "sass": "^1.35.2",
     "sass-loader": "^11.0.1",
     "sass-resources-loader": "^2.2.3",
     "style-loader": "^2.0.0",

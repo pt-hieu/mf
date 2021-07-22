@@ -1,1 +1,1 @@
-declare module 'common/antd'
+declare module 'common/NavBar'

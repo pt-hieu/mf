@@ -1,8 +1,10 @@
 import './styles.scss';
 import Card from './subcomponents/Card';
+import NavBar from 'common/NavBar';
 export default () => {
   return (
     <div className="events">
+      <NavBar active="Events" />
       <div className="events__header">
         <img
           src="../../assets/eventify.png"

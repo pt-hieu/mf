@@ -1,0 +1,78 @@
+$size: 44px;
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+
+  height: $size;
+  width: auto;
+  border-radius: calc(#{$size} / 2);
+  display: flex;
+
+  cursor: pointer;
+  background-color: white;
+  overflow: hidden;
+
+  &__icon {
+    color: white;
+    background-color: #353753;
+    border-radius: inherit;
+    width: $size;
+    display: inline-block;
+    line-height: $size;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    z-index: 19999;
+    user-select: none; /* Standard */
+
+    &--expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    border-radius: inherit;
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    z-index: -1;
+
+    &--shrinked {
+      transform: translateX(-100%);
+    }
+
+    &__item {
+      position: relative;
+      min-width: calc(#{$size} + 100px);
+      line-height: $size;
+      border-radius: inherit;
+      background-color: #353753;
+      color: white;
+      span {
+        margin-left: calc(#{$size + 10px});
+      }
+
+      &--active {
+        background-color: #1c1e30;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: inherit;
+        z-index: 10;
+        background-color: white;
+        left: -1px;
+      }
+    }
+  }
+}

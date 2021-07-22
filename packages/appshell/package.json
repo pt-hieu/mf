@@ -1,5 +1,5 @@
 {
-  "name": "appshell",
+  "name": "@mf/appshell",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Hieu Pham <hieupham@kms-technology.com>",
@@ -21,7 +21,7 @@
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
-    "types": "1.0.0",
+    "@mf/types": "1.0.0",
     "@babel/preset-typescript": "^7.13.0",
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",

@@ -15,7 +15,7 @@
       "jsx": "preserve",
       "baseUrl": ".",
       "paths": {
-        "@ontest/common/*": ["../common/*"]
+        "@mf/types/*": ["../types/*"]
       }
     },
     "include": [ "**/*.ts", "**/*.tsx"],
