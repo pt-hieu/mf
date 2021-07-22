@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react'
-export interface NavbarProps {
+
+interface NavbarProps {
+    active: string,
     style: CSSProperties
-    active: string
 }

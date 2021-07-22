@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import './styles.scss';
 import { NavbarProps } from '@mf/types';
 
-export default memo(({ style, active }) => {
+export default memo(({ style, active }: NavbarProps) => {
   const [expand, setExpand] = useState<boolean>(false);
   const toggle = useCallback(() => {
     setExpand(!expand);

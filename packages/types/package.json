@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Hieu Pham <hieupham@kms-technology.com>",
   "license": "ISC",
-  "main": "dist/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
