@@ -1,6 +1,6 @@
 import { memo, useCallback, useState } from 'react';
 import './styles.scss';
-import { NavbarProps } from '@mf/types';
+import { NavbarProps, Apps } from '@mf/types';
 
 export default memo(({ style, active }: NavbarProps) => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -26,15 +26,11 @@ export default memo(({ style, active }: NavbarProps) => {
           expand ? '' : 'navbar__container--shrinked'
         }`}
       >
-        <div className={`navbar__container__item ${isActice('HRM')}`}>
-          <span>HRM</span>
-        </div>
-        <div className={`navbar__container__item ${isActice('Helpdesk')}`}>
-          <span>Helpdesk</span>
-        </div>
-        <div className={`navbar__container__item ${isActice('Events')}`}>
-          <span>Events</span>
-        </div>
+        {(Object.keys(Apps) as (keyof typeof Apps)[]).map((app) => (
+          <div className={`navbar__container__item ${isActice(app)}`}>
+            <span>{app}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
