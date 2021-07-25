@@ -9,18 +9,15 @@ $size: 44px;
 
   height: $size;
   width: auto;
-  border-radius: calc(#{$size} / 2);
   display: flex;
 
-  cursor: pointer;
-  background-color: white;
   overflow: hidden;
   z-index: 10;
 
   &__icon {
     color: white;
     background-color: #353753;
-    border-radius: inherit;
+    border-radius: calc(#{$size} / 2);
     width: $size;
     display: inline-block;
     line-height: $size;
@@ -40,22 +37,26 @@ $size: 44px;
   &__container {
     display: flex;
     position: relative;
-    border-radius: inherit;
     transition: 0.4s ease-in-out;
-    background-color: white;
     z-index: -1;
-
+    left: 0px;
+    margin-left: 2rem;
+    opacity: 1;
     &--shrinked {
-      transform: translateX(-100%);
+      left: -1000px;
+      background-color: #353753;
+      opacity: 0;
     }
 
     &__item {
       position: relative;
       min-width: calc(#{$size} + 100px);
       line-height: $size;
-      border-radius: inherit;
+      text-align: center;
       background-color: #353753;
       color: white;
+      margin-right: 1rem;
+      border-radius: calc(#{$size} / 2);
       span {
         margin-left: calc(#{$size + 10px});
       }
@@ -64,16 +65,17 @@ $size: 44px;
         background-color: #1c1e30;
       }
 
-      &::before {
-        content: '';
-        position: absolute;
-        width: $size;
-        height: $size;
-        border-radius: inherit;
-        z-index: 10;
-        background-color: white;
-        left: -1px;
+      &:hover {
+        background-color: #626696;
       }
     }
   }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }

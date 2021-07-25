@@ -1,12 +1,9 @@
 import './styles.scss';
 import Card from './subcomponents/Card';
-import NavBar from 'common/NavBar';
-import { Apps } from '@mf/types';
 
 export default () => {
   return (
     <div className="events">
-      <NavBar active={Apps.EVENTS} style={{}} />
       <div className="events__header">
         <img
           src="../../assets/eventify.png"
