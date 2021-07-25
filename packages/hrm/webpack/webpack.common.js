@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'events',
+      name: 'hrm',
       filename: 'remoteEntry.js',
       remotes: {
         common: 'common@http://localhost:2999/remoteEntry.js',
