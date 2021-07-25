@@ -10,22 +10,18 @@ const Events = lazy(() => import('events/Events'));
 export default () => {
   return (
     <Router>
-      <NavBar style={{}} active={Apps.EVENTS} />
       <Switch>
         <Route exact path="/">
           <Home></Home>
         </Route>
-        <Route exact path="/events/*">
+        <Route exact path={['/events', '/events/*']}>
           <Suspense fallback="loading...">
+            <NavBar style={{}} active={Apps.EVENTS} />
             <Events></Events>
           </Suspense>
         </Route>
-        <Route exact path="/events">
-          <Suspense fallback="loading...">
-            <Events></Events>
-          </Suspense>
-        </Route>
-        <Route exact path="/hrm">
+        <Route exact path={['/hrm', '/hrm/*']}>
+          <NavBar style={{}} active={Apps.EVENTS} />
           <Suspense fallback="loading...">
             <HRM></HRM>
           </Suspense>
