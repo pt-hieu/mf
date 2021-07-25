@@ -15,6 +15,7 @@ $size: 44px;
   cursor: pointer;
   background-color: white;
   overflow: hidden;
+  z-index: 10;
 
   &__icon {
     color: white;

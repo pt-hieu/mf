@@ -27,7 +27,10 @@ export default memo(({ style, active }: NavbarProps) => {
         }`}
       >
         {(Object.keys(Apps) as (keyof typeof Apps)[]).map((app) => (
-          <div className={`navbar__container__item ${isActice(Apps[app])}`}>
+          <div
+            key={Apps[app]}
+            className={`navbar__container__item ${isActice(Apps[app])}`}
+          >
             <span>{Apps[app]}</span>
           </div>
         ))}

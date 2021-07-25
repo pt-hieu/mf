@@ -1,0 +1,42 @@
+$sidebar: #2a3557;
+$actice: #14b1e7;
+
+.hrm {
+  &__sidebar {
+    background-color: $sidebar;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 270px;
+
+    &__title {
+      line-height: 4rem;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    &__item {
+      padding: 1rem 0em;
+      padding-left: 4rem;
+      color: white;
+
+      &:hover {
+        background-color: $actice;
+      }
+
+      &--active {
+        background-color: $actice;
+      }
+    }
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
