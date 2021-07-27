@@ -1,5 +1,7 @@
 import './styles.scss';
 import { useState } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 
 const sidebarItems = [
   'Dashboard',
@@ -13,6 +15,8 @@ const sidebarItems = [
 
 export default () => {
   const [activeItem, setActiveItem] = useState<string>(sidebarItems[0]);
+  const history = useHistory();
+
   return (
     <div className="hrm">
       <div className="hrm__sidebar">
@@ -26,10 +30,22 @@ export default () => {
                 item === activeItem ? 'hrm__sidebar__item--active' : ''
               }`}
             >
-              {item}
+              <Link
+                style={{ color: 'white' }}
+                to={`/hrm/${item.toLocaleLowerCase()}`}
+              >
+                {item}
+              </Link>
             </div>
           ))}
         </div>
+      </div>
+      <div className="hrm__content">
+        <Switch>
+          <Route exact path="/hrm/time-sheet">
+            <div>abc</div>
+          </Route>
+        </Switch>
       </div>
     </div>
   );

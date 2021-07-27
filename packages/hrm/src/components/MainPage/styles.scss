@@ -2,6 +2,10 @@ $sidebar: #2a3557;
 $actice: #14b1e7;
 
 .hrm {
+  &__content {
+    margin-left: 270px;
+  }
+
   &__sidebar {
     background-color: $sidebar;
     position: fixed;
